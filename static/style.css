@@ -7,18 +7,25 @@ body {
     width:100vw;
 }
 #divElement{
- border:1px white solid;
+
  height:100%;
  overflow:scroll;
  display:flex;
  flex-direction: column;
  align-items: center;
+}
 
- 
+.buttons:hover{
+    background-color: aqua;
 }
- #divElement canvas{
-    border:1px red solid;
+#description{
+    font-size: 2rem;
+    position:absolute;
+    top:25%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:auto;
+    text-wrap: nowrap;
+    color:white;
 }
-#divElement button:hover{
-    color:red;
-}
+
