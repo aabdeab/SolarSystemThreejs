@@ -22,7 +22,7 @@
         // Add a sphere for the moon
         const moonGeometry = new THREE.SphereGeometry(1, 32, 32);
         const textureLoader = new THREE.TextureLoader();
-        const moonTexture = textureLoader.load('./sun.jpg'); // Replace with your texture
+        const moonTexture = textureLoader.load('./static/sun.jpg'); // Replace with your texture
         const moonMaterial = new THREE.MeshStandardMaterial({ map: moonTexture });
         const moon = new THREE.Mesh(moonGeometry, moonMaterial);
         scene.add(moon);
