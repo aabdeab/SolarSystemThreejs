@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon in Three.js</title>
-    <style ref="style.css">
-        
-    </style>
+    <link rel="stylesheet" href="static/style.css">
+
 </head>
 <body>
-    <button style="width:50px;height:50px;border-style:none;background-color: rgb(5, 5, 48);color:white;cursor:pointer;border-radius: 45px;"> >>>  </button>
+    
+    <div id="divElement">
+        <div style="display: flex;justify-content: center;">
+        <button style="width:50px;height:50px;border-style:none;background-color: rgb(5, 5, 48);color:white;cursor:pointer;border-radius: 45px;"> <<<  </button>
+        <button style="width:50px;height:50px;border-style:none;background-color: rgb(5, 5, 48);color:white;cursor:pointer;border-radius: 45px;"> >>>  </button>
+    </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
         // Set up the scene, camera, and renderer
+        const divElement =document.getElementById("divElement");
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
+        divElement.appendChild(renderer.domElement);
+        
 
         // Add a sphere for the moon
         const moonGeometry = new THREE.SphereGeometry(1, 32, 32);
         const textureLoader = new THREE.TextureLoader();
-        const moonTexture = textureLoader.load('./static/sun.jpg'); // Replace with your texture
+        const moonTexture = textureLoader.load('./static/th.jpeg'); // Replace with your texture
         const moonMaterial = new THREE.MeshStandardMaterial({ map: moonTexture });
         const moon = new THREE.Mesh(moonGeometry, moonMaterial);
         scene.add(moon);
@@ -48,7 +55,9 @@
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setSize(divElement.offsetWidth,divElement.offsetHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            
         });
     </script>
 </body>
