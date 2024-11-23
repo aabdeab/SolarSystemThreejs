@@ -1,0 +1,55 @@
+{
+    "solar_system": [
+      { "id":1,
+        "name": "Sun",
+        "volume": 1.41e18,  
+        "mass": 1.989e30     
+      },
+      { "id":1,
+        "name": "Mercury",
+        "volume": 6.08e10,   
+        "mass": 3.285e23      
+      },
+      { "id":1,
+        "name": "Venus",
+        "volume": 9.28e11,   
+        "mass": 4.867e24      
+      },
+      { "id":1,
+        "name": "Earth",
+        "volume": 1.08e12,    
+        "mass": 5.972e24      
+      },
+      { "id":1,
+        "name": "Moon",
+        "volume": 2.19e10,   
+        "mass": 7.342e22      
+      },
+      { "id":1,
+        "name": "Mars",
+        "volume": 1.63e11,   
+        "mass": 6.39e23      
+      },
+      { "id":1,
+        "name": "Jupiter",
+        "volume": 1.43e15,    
+        "mass": 1.898e27     
+      },
+      { "id":1,
+        "name": "Saturn",
+        "volume": 8.27e14,    
+        "mass": 5.683e26     
+      },
+      { "id":1,
+        "name": "Uranus",
+        "volume": 6.83e13,   
+        "mass": 8.681e25     
+      },
+      { "id":1,
+        "name": "Neptune",
+        "volume": 6.25e13,    
+        "mass": 1.024e26      
+      }
+    ]
+  }
+  

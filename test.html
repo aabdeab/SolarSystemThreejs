@@ -28,12 +28,12 @@
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         divElement.appendChild(renderer.domElement);
-        
+
 
         // Add a sphere for the moon
         const moonGeometry = new THREE.SphereGeometry(1, 32, 32);
         const textureLoader = new THREE.TextureLoader();
-        const moonTexture = textureLoader.load('./static/th.jpeg'); // Replace with your texture
+        const moonTexture = textureLoader.load('./static/Moon.jpeg'); // Replace with your texture
         const moonMaterial = new THREE.MeshStandardMaterial({ map: moonTexture });
         const moon = new THREE.Mesh(moonGeometry, moonMaterial);
         scene.add(moon);
@@ -61,7 +61,7 @@
             camera.updateProjectionMatrix();
             renderer.setSize(divElement.offsetWidth,divElement.offsetHeight);
             renderer.setPixelRatio(window.devicePixelRatio);
-            
+
         });
     </script>
 </body>
